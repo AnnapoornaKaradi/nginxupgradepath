@@ -1,0 +1,3 @@
+We have a need to report on AutomationReportingDB and need access for BI account.
+
+BI Account : bi-exos-app-01
