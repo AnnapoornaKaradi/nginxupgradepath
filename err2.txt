@@ -1,0 +1,174 @@
+025-10-15T11:47:28.0888429Z   [32m+[0m create
+2025-10-15T11:47:28.0889081Z [31m-[0m/[32m+[0m destroy and then create replacement
+2025-10-15T11:47:28.0889542Z [0m
+2025-10-15T11:47:28.0889956Z Terraform will perform the following actions:
+2025-10-15T11:47:28.0890189Z 
+2025-10-15T11:47:28.1453385Z [1m  # azurerm_monitor_diagnostic_setting.env_to_evh["_subscriptions_8d1a8329-ea90-46a3-b900-8676c42ed761_resourcegroups_rg-data-sandbox-eus2-01_providers_microsoft.sql_servers_sql-app-sandbox-eus2-01_databases_tmtablemig01"][0m will be created[0m[0m
+2025-10-15T11:47:28.1454839Z [0m  [32m+[0m[0m resource "azurerm_monitor_diagnostic_setting" "env_to_evh" {
+2025-10-15T11:47:28.1456689Z       [32m+[0m [0m[1m[0meventhub_authorization_rule_id[0m[0m = "/subscriptions/a2ca26b7-774e-4207-801a-c45151ff310d/resourceGroups/rg-log-common-eus2-01/providers/Microsoft.EventHub/namespaces/evh-diag-sandbox-eus2-01/authorizationRules/default_diagnostic_logging_rule"
+2025-10-15T11:47:28.1457914Z       [32m+[0m [0m[1m[0meventhub_name[0m[0m                  = "evh-diag-sandbox-eus2-01"
+2025-10-15T11:47:28.1458685Z       [32m+[0m [0m[1m[0mid[0m[0m                             = (known after apply)
+2025-10-15T11:47:28.1459483Z       [32m+[0m [0m[1m[0mlog_analytics_destination_type[0m[0m = (known after apply)
+2025-10-15T11:47:28.1460251Z       [32m+[0m [0m[1m[0mname[0m[0m                           = "to_event_hub"
+2025-10-15T11:47:28.1471014Z       [32m+[0m [0m[1m[0mtarget_resource_id[0m[0m             = "/subscriptions/8d1a8329-ea90-46a3-b900-8676c42ed761/resourceGroups/rg-data-sandbox-eus2-01/providers/Microsoft.Sql/servers/sql-app-sandbox-eus2-01/databases/TMTableMig01"
+2025-10-15T11:47:28.1471504Z 
+2025-10-15T11:47:28.1471964Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1472437Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "DevOpsOperationsAudit"
+2025-10-15T11:47:28.1472822Z         }
+2025-10-15T11:47:28.1473279Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1473844Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "SQLSecurityAuditEvents"
+2025-10-15T11:47:28.1474291Z         }
+2025-10-15T11:47:28.1474423Z 
+2025-10-15T11:47:28.1474866Z       [32m+[0m [0mlog {
+2025-10-15T11:47:28.1475523Z           [32m+[0m [0m[1m[0mcategory[0m[0m       = (known after apply)
+2025-10-15T11:47:28.1476283Z           [32m+[0m [0m[1m[0mcategory_group[0m[0m = (known after apply)
+2025-10-15T11:47:28.1478084Z           [32m+[0m [0m[1m[0menabled[0m[0m        = (known after apply)
+2025-10-15T11:47:28.1478331Z 
+2025-10-15T11:47:28.1478972Z           [32m+[0m [0mretention_policy {
+2025-10-15T11:47:28.1479680Z               [32m+[0m [0m[1m[0mdays[0m[0m    = (known after apply)
+2025-10-15T11:47:28.1480402Z               [32m+[0m [0m[1m[0menabled[0m[0m = (known after apply)
+2025-10-15T11:47:28.1480961Z             }
+2025-10-15T11:47:28.1481297Z         }
+2025-10-15T11:47:28.1481446Z 
+2025-10-15T11:47:28.1481949Z       [32m+[0m [0mmetric {
+2025-10-15T11:47:28.1483005Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "Basic"
+2025-10-15T11:47:28.1483661Z           [32m+[0m [0m[1m[0menabled[0m[0m  = false
+2025-10-15T11:47:28.1484040Z         }
+2025-10-15T11:47:28.1484547Z       [32m+[0m [0mmetric {
+2025-10-15T11:47:28.1485238Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "InstanceAndAppAdvanced"
+2025-10-15T11:47:28.1485886Z           [32m+[0m [0m[1m[0menabled[0m[0m  = false
+2025-10-15T11:47:28.1486250Z         }
+2025-10-15T11:47:28.1486664Z       [32m+[0m [0mmetric {
+2025-10-15T11:47:28.1487288Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "WorkloadManagement"
+2025-10-15T11:47:28.1487652Z           [32m+[0m [0m[1m[0menabled[0m[0m  = false
+2025-10-15T11:47:28.1487928Z         }
+2025-10-15T11:47:28.1488111Z     }
+2025-10-15T11:47:28.1488182Z 
+2025-10-15T11:47:28.1513833Z [1m  # azurerm_monitor_diagnostic_setting.env_to_loga["_subscriptions_8d1a8329-ea90-46a3-b900-8676c42ed761_resourcegroups_rg-data-sandbox-eus2-01_providers_microsoft.sql_servers_sql-app-sandbox-eus2-01_databases_tmtablemig01"][0m will be created[0m[0m
+2025-10-15T11:47:28.1515213Z [0m  [32m+[0m[0m resource "azurerm_monitor_diagnostic_setting" "env_to_loga" {
+2025-10-15T11:47:28.1516228Z       [32m+[0m [0m[1m[0mid[0m[0m                             = (known after apply)
+2025-10-15T11:47:28.1517120Z       [32m+[0m [0m[1m[0mlog_analytics_destination_type[0m[0m = (known after apply)
+2025-10-15T11:47:28.1523338Z       [32m+[0m [0m[1m[0mlog_analytics_workspace_id[0m[0m     = "/subscriptions/a2ca26b7-774e-4207-801a-c45151ff310d/resourceGroups/rg-log-common-eus2-01/providers/Microsoft.OperationalInsights/workspaces/log-app-common-eus2-01"
+2025-10-15T11:47:28.1524413Z       [32m+[0m [0m[1m[0mname[0m[0m                           = "to_log_analytics"
+2025-10-15T11:47:28.1527162Z       [32m+[0m [0m[1m[0mtarget_resource_id[0m[0m             = "/subscriptions/8d1a8329-ea90-46a3-b900-8676c42ed761/resourceGroups/rg-data-sandbox-eus2-01/providers/Microsoft.Sql/servers/sql-app-sandbox-eus2-01/databases/TMTableMig01"
+2025-10-15T11:47:28.1528126Z 
+2025-10-15T11:47:28.1529105Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1533848Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "AutomaticTuning"
+2025-10-15T11:47:28.1534232Z         }
+2025-10-15T11:47:28.1534637Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1535516Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "Blocks"
+2025-10-15T11:47:28.1535850Z         }
+2025-10-15T11:47:28.1538317Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1539061Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "DatabaseWaitStatistics"
+2025-10-15T11:47:28.1539550Z         }
+2025-10-15T11:47:28.1540061Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1540784Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "Deadlocks"
+2025-10-15T11:47:28.1541249Z         }
+2025-10-15T11:47:28.1541597Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1541914Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "Errors"
+2025-10-15T11:47:28.1542249Z         }
+2025-10-15T11:47:28.1542719Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1543421Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "QueryStoreRuntimeStatistics"
+2025-10-15T11:47:28.1543879Z         }
+2025-10-15T11:47:28.1544412Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1545114Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "QueryStoreWaitStatistics"
+2025-10-15T11:47:28.1545596Z         }
+2025-10-15T11:47:28.1546088Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1546717Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "SQLInsights"
+2025-10-15T11:47:28.1547156Z         }
+2025-10-15T11:47:28.1547644Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1548191Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "Timeouts"
+2025-10-15T11:47:28.1548597Z         }
+2025-10-15T11:47:28.1548735Z 
+2025-10-15T11:47:28.1549200Z       [32m+[0m [0mlog {
+2025-10-15T11:47:28.1550294Z           [32m+[0m [0m[1m[0mcategory[0m[0m       = (known after apply)
+2025-10-15T11:47:28.1551191Z           [32m+[0m [0m[1m[0mcategory_group[0m[0m = (known after apply)
+2025-10-15T11:47:28.1551967Z           [32m+[0m [0m[1m[0menabled[0m[0m        = (known after apply)
+2025-10-15T11:47:28.1552202Z 
+2025-10-15T11:47:28.1552760Z           [32m+[0m [0mretention_policy {
+2025-10-15T11:47:28.1553462Z               [32m+[0m [0m[1m[0mdays[0m[0m    = (known after apply)
+2025-10-15T11:47:28.1554184Z               [32m+[0m [0m[1m[0menabled[0m[0m = (known after apply)
+2025-10-15T11:47:28.1554672Z             }
+2025-10-15T11:47:28.1554999Z         }
+2025-10-15T11:47:28.1555146Z 
+2025-10-15T11:47:28.1555615Z       [32m+[0m [0mmetric {
+2025-10-15T11:47:28.1556293Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "Basic"
+2025-10-15T11:47:28.1556929Z           [32m+[0m [0m[1m[0menabled[0m[0m  = true
+2025-10-15T11:47:28.1557370Z         }
+2025-10-15T11:47:28.1560067Z       [32m+[0m [0mmetric {
+2025-10-15T11:47:28.1560895Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "InstanceAndAppAdvanced"
+2025-10-15T11:47:28.1561582Z           [32m+[0m [0m[1m[0menabled[0m[0m  = true
+2025-10-15T11:47:28.1561901Z         }
+2025-10-15T11:47:28.1562206Z       [32m+[0m [0mmetric {
+2025-10-15T11:47:28.1562903Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "WorkloadManagement"
+2025-10-15T11:47:28.1563624Z           [32m+[0m [0m[1m[0menabled[0m[0m  = true
+2025-10-15T11:47:28.1563942Z         }
+2025-10-15T11:47:28.1564264Z     }
+2025-10-15T11:47:28.1564332Z 
+2025-10-15T11:47:28.1567039Z [1m  # azurerm_monitor_diagnostic_setting.env_to_loga["_subscriptions_8d1a8329-ea90-46a3-b900-8676c42ed761_resourcegroups_rg-wvd-sandbox-eus2-01_providers_microsoft.network_networkinterfaces_nic-01-wvd3_sand_e2_1"][0m will be created[0m[0m
+2025-10-15T11:47:28.1569565Z [0m  [32m+[0m[0m resource "azurerm_monitor_diagnostic_setting" "env_to_loga" {
+2025-10-15T11:47:28.1570375Z       [32m+[0m [0m[1m[0mid[0m[0m                             = (known after apply)
+2025-10-15T11:47:28.1571653Z       [32m+[0m [0m[1m[0mlog_analytics_destination_type[0m[0m = (known after apply)
+2025-10-15T11:47:28.1576289Z       [32m+[0m [0m[1m[0mlog_analytics_workspace_id[0m[0m     = "/subscriptions/a2ca26b7-774e-4207-801a-c45151ff310d/resourceGroups/rg-log-common-eus2-01/providers/Microsoft.OperationalInsights/workspaces/log-app-common-eus2-01"
+2025-10-15T11:47:28.1577858Z       [32m+[0m [0m[1m[0mname[0m[0m                           = "to_log_analytics"
+2025-10-15T11:47:28.1584398Z       [32m+[0m [0m[1m[0mtarget_resource_id[0m[0m             = "/subscriptions/8d1a8329-ea90-46a3-b900-8676c42ed761/resourceGroups/rg-wvd-sandbox-eus2-01/providers/Microsoft.Network/networkInterfaces/nic-01-wvd3_sand_e2_1"
+2025-10-15T11:47:28.1584891Z 
+2025-10-15T11:47:28.1585361Z       [32m+[0m [0menabled_log {
+2025-10-15T11:47:28.1586002Z           [32m+[0m [0m[1m[0mcategory[0m[0m       = (known after apply)
+2025-10-15T11:47:28.1586646Z           [32m+[0m [0m[1m[0mcategory_group[0m[0m = (known after apply)
+2025-10-15T11:47:28.1586792Z 
+2025-10-15T11:47:28.1587066Z           [32m+[0m [0mretention_policy {
+2025-10-15T11:47:28.1587488Z               [32m+[0m [0m[1m[0mdays[0m[0m    = (known after apply)
+2025-10-15T11:47:28.1588364Z               [32m+[0m [0m[1m[0menabled[0m[0m = (known after apply)
+2025-10-15T11:47:28.1588977Z             }
+2025-10-15T11:47:28.1589345Z         }
+2025-10-15T11:47:28.1589614Z 
+2025-10-15T11:47:28.1590291Z       [32m+[0m [0mlog {
+2025-10-15T11:47:28.1591157Z           [32m+[0m [0m[1m[0mcategory[0m[0m       = (known after apply)
+2025-10-15T11:47:28.1591752Z           [32m+[0m [0m[1m[0mcategory_group[0m[0m = (known after apply)
+2025-10-15T11:47:28.1593403Z           [32m+[0m [0m[1m[0menabled[0m[0m        = (known after apply)
+2025-10-15T11:47:28.1593674Z 
+2025-10-15T11:47:28.1594212Z           [32m+[0m [0mretention_policy {
+2025-10-15T11:47:28.1595514Z               [32m+[0m [0m[1m[0mdays[0m[0m    = (known after apply)
+2025-10-15T11:47:28.1596165Z               [32m+[0m [0m[1m[0menabled[0m[0m = (known after apply)
+2025-10-15T11:47:28.1596564Z             }
+2025-10-15T11:47:28.1596883Z         }
+2025-10-15T11:47:28.1597022Z 
+2025-10-15T11:47:28.1597466Z       [32m+[0m [0mmetric {
+2025-10-15T11:47:28.1598327Z           [32m+[0m [0m[1m[0mcategory[0m[0m = "AllMetrics"
+2025-10-15T11:47:28.1599131Z           [32m+[0m [0m[1m[0menabled[0m[0m  = true
+2025-10-15T11:47:28.1599665Z         }
+2025-10-15T11:47:28.1599985Z     }
+2025-10-15T11:47:28.1601103Z 
+2025-10-15T11:47:28.1601868Z [1m  # local_sensitive_file.az_sql_desired_state["app"][0m will be created[0m[0m
+2025-10-15T11:47:28.1602827Z [0m  [32m+[0m[0m resource "local_sensitive_file" "az_sql_desired_state" {
+2025-10-15T11:47:28.1603630Z       [32m+[0m [0m[1m[0mcontent[0m[0m              = (sensitive value)
+2025-10-15T11:47:28.1604440Z       [32m+[0m [0m[1m[0mcontent_base64sha256[0m[0m = (known after apply)
+2025-10-15T11:47:28.1605397Z       [32m+[0m [0m[1m[0mcontent_base64sha512[0m[0m = (known after apply)
+2025-10-15T11:47:28.1606128Z       [32m+[0m [0m[1m[0mcontent_md5[0m[0m          = (known after apply)
+2025-10-15T11:47:28.1606877Z       [32m+[0m [0m[1m[0mcontent_sha1[0m[0m         = (known after apply)
+2025-10-15T11:47:28.1610194Z       [32m+[0m [0m[1m[0mcontent_sha256[0m[0m       = (known after apply)
+2025-10-15T11:47:28.1612340Z       [32m+[0m [0m[1m[0mcontent_sha512[0m[0m       = (known after apply)
+2025-10-15T11:47:28.1613143Z       [32m+[0m [0m[1m[0mdirectory_permission[0m[0m = "0700"
+2025-10-15T11:47:28.1613965Z       [32m+[0m [0m[1m[0mfile_permission[0m[0m      = "0700"
+2025-10-15T11:47:28.1614622Z       [32m+[0m [0m[1m[0mfilename[0m[0m             = (known after apply)
+2025-10-15T11:47:28.1615303Z       [32m+[0m [0m[1m[0mid[0m[0m                   = (known after apply)
+2025-10-15T11:47:28.1617643Z     }
+2025-10-15T11:47:28.1619607Z 
+2025-10-15T11:47:28.1620443Z [1m  # null_resource.az_sql_state_apply["app"][0m must be [1m[31mreplaced[0m[0m
+2025-10-15T11:47:28.1622911Z [0m[31m-[0m/[32m+[0m[0m resource "null_resource" "az_sql_state_apply" {
+2025-10-15T11:47:28.1623690Z       [33m~[0m [0m[1m[0mid[0m[0m       = "3890961470999739710" [33m->[0m [0m(known after apply)
+2025-10-15T11:47:28.1624654Z       [33m~[0m [0m[1m[0mtriggers[0m[0m = { [31m# forces replacement[0m[0m
+2025-10-15T11:47:28.1625304Z           [33m~[0m [0m"changes" = <<-EOT
+2025-10-15T11:47:28.1625710Z               [31m-[0m [0mNo changes to perform
+2025-10-15T11:47:28.1631781Z               [32m+[0m [0mChecked on 10/15/2025 11:45:01          fMqiDdrjgXLeV30H61oBtGuTRUYAl2hzx8Ik7OZn59mKWNbsaw
+2025-10-15T11:47:28.1634769Z               [32m+[0m [0mDatabase automationreportingdb - Add user bi-exos-app-01
+2025-10-15T11:47:28.1635693Z               [32m+[0m [0mDatabase automationreportingdb - Add role assignment db_datareader to bi-exos-app-01
+2025-10-15T11:47:28.1637335Z               [32m+[0m [0mDatabase automationreportingdb - Add role assignment db_executor to bi-exos-app-01
+2025-10-15T11:47:28.1638082Z               [32m+[0m [0mDatabase TMTableMig01 - Drop database
+2025-10-15T11:47:28.1638610Z               [32m+[0m [0m
+2025-10-15T11:47:28.1638978Z             EOT
+2025-10-15T11:47:28.1639344Z         }
+2025-10-15T11:47:28.1639655Z     }
+2025-10-15T11:47:28.1639798Z 
+2025-10-15T11:47:28.1640884Z [0m[1mPlan:[0m 5 to add, 0 to change, 1 to destroy.[0m
