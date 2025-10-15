@@ -1,0 +1,37 @@
+2025-10-15T07:36:09.8357439Z Resource actions are indicated with the following symbols:
+2025-10-15T07:36:09.8358341Z   [32m+[0m create
+2025-10-15T07:36:09.8359489Z [31m-[0m/[32m+[0m destroy and then create replacement
+2025-10-15T07:36:09.8359929Z [0m
+2025-10-15T07:36:09.8360250Z Terraform will perform the following actions:
+2025-10-15T07:36:09.8360413Z 
+2025-10-15T07:36:09.8562455Z [1m  # local_sensitive_file.az_sql_desired_state["app"][0m will be created[0m[0m
+2025-10-15T07:36:09.8570285Z [0m  [32m+[0m[0m resource "local_sensitive_file" "az_sql_desired_state" {
+2025-10-15T07:36:09.8571657Z       [32m+[0m [0m[1m[0mcontent[0m[0m              = (sensitive value)
+2025-10-15T07:36:09.8573662Z       [32m+[0m [0m[1m[0mcontent_base64sha256[0m[0m = (known after apply)
+2025-10-15T07:36:09.8574388Z       [32m+[0m [0m[1m[0mcontent_base64sha512[0m[0m = (known after apply)
+2025-10-15T07:36:09.8574947Z       [32m+[0m [0m[1m[0mcontent_md5[0m[0m          = (known after apply)
+2025-10-15T07:36:09.8575478Z       [32m+[0m [0m[1m[0mcontent_sha1[0m[0m         = (known after apply)
+2025-10-15T07:36:09.8576045Z       [32m+[0m [0m[1m[0mcontent_sha256[0m[0m       = (known after apply)
+2025-10-15T07:36:09.8576698Z       [32m+[0m [0m[1m[0mcontent_sha512[0m[0m       = (known after apply)
+2025-10-15T07:36:09.8577197Z       [32m+[0m [0m[1m[0mdirectory_permission[0m[0m = "0700"
+2025-10-15T07:36:09.8577666Z       [32m+[0m [0m[1m[0mfile_permission[0m[0m      = "0700"
+2025-10-15T07:36:09.8578021Z       [32m+[0m [0m[1m[0mfilename[0m[0m             = (known after apply)
+2025-10-15T07:36:09.8578460Z       [32m+[0m [0m[1m[0mid[0m[0m                   = (known after apply)
+2025-10-15T07:36:09.8578819Z     }
+2025-10-15T07:36:09.8578883Z 
+2025-10-15T07:36:09.8579159Z [1m  # null_resource.az_sql_state_apply["app"][0m must be [1m[31mreplaced[0m[0m
+2025-10-15T07:36:09.8579609Z [0m[31m-[0m/[32m+[0m[0m resource "null_resource" "az_sql_state_apply" {
+2025-10-15T07:36:09.8580124Z       [33m~[0m [0m[1m[0mid[0m[0m       = "8181016447404685887" [33m->[0m [0m(known after apply)
+2025-10-15T07:36:09.8581006Z       [33m~[0m [0m[1m[0mtriggers[0m[0m = { [31m# forces replacement[0m[0m
+2025-10-15T07:36:09.8581429Z           [33m~[0m [0m"changes" = <<-EOT
+2025-10-15T07:36:09.8581823Z               [31m-[0m [0mNo changes to perform
+2025-10-15T07:36:09.8582433Z               [32m+[0m [0mChecked on 10/15/2025 07:35:28          3PcxENuqJgMDAp7U65h4FSCtlj2sWew1vd8fVzL9TbrkyiaI0O
+2025-10-15T07:36:09.8583113Z               [32m+[0m [0mDatabase automationreportingdb - Add user bi-exos-app-01
+2025-10-15T07:36:09.8583744Z               [32m+[0m [0mDatabase automationreportingdb - Add role assignment db_datareader to bi-exos-app-01
+2025-10-15T07:36:09.8587838Z               [32m+[0m [0mDatabase automationreportingdb - Add role assignment db_executor to bi-exos-app-01
+2025-10-15T07:36:09.8588706Z               [32m+[0m [0m
+2025-10-15T07:36:09.8589131Z             EOT
+2025-10-15T07:36:09.8590041Z         }
+2025-10-15T07:36:09.8590345Z     }
+2025-10-15T07:36:09.8590477Z 
+2025-10-15T07:36:09.8590950Z [0m[1mPlan:[0m 2 to add, 0 to change, 1 to destroy.[0m
