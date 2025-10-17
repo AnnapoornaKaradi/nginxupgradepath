@@ -1,0 +1,29 @@
+2025-10-17T14:36:33.4748217Z ##[section]Starting: Deploy on Cluster 2
+2025-10-17T14:36:33.4796896Z ==============================================================================
+2025-10-17T14:36:33.4797050Z Task         : Package and deploy Helm charts
+2025-10-17T14:36:33.4797169Z Description  : Deploy, configure, update a Kubernetes cluster in Azure Container Service by running helm commands
+2025-10-17T14:36:33.4797309Z Version      : 1.263.0
+2025-10-17T14:36:33.4797378Z Author       : Microsoft Corporation
+2025-10-17T14:36:33.4797472Z Help         : https://aka.ms/azpipes-helm-tsg
+2025-10-17T14:36:33.4797554Z ==============================================================================
+2025-10-17T14:36:35.9246456Z [command]"C:\Program Files\Kubelogin\bin\windows_amd64\kubelogin.exe" convert-kubeconfig -l spn --client-id *** --client-secret *** --tenant-id 8a807b9b-02da-47f3-a903-791a42a2285c --v 20
+2025-10-17T14:36:36.0382602Z I1017 10:36:36.035011   14404 convert.go:213] Context: , Login Method: spn, Environment: AzurePublicCloud, TenantID: 8a807b9b-02da-47f3-a903-791a42a2285c, ServerID: , ClientID: ***, IsLegacy: false, msiResourceID: , Timeout: 1m0s, authRecordCacheDir: C:\Users\TEMP.FNFGLOBAL.077/.kube/cache/kubelogin/, tokenauthRecordFile: C:\Users\TEMP.FNFGLOBAL.077\.kube\cache\kubelogin\auth.json, AZURE_CONFIG_DIR: , RedirectURL: , LoginHint: 
+2025-10-17T14:36:36.0384063Z I1017 10:36:36.037013   14404 convert.go:223] Loading kubeconfig from F:\azdevops_release\fnf\1\_work\_temp\helmTask\1760711795879\config
+2025-10-17T14:36:36.0408645Z I1017 10:36:36.039013   14404 loader.go:395] Config loaded from file:  F:\azdevops_release\fnf\1\_work\_temp\helmTask\1760711795879\config
+2025-10-17T14:36:36.0409357Z I1017 10:36:36.040012   14404 convert.go:245] context: "clusterUser_fnf-rg-aks-development_fnf-lev-aks-dev-02"
+2025-10-17T14:36:36.0409768Z I1017 10:36:36.040012   14404 convert.go:252] converting...
+2025-10-17T14:36:36.0425541Z I1017 10:36:36.042016   14404 loader.go:395] Config loaded from file:  F:\azdevops_release\fnf\1\_work\_temp\helmTask\1760711795879\config
+2025-10-17T14:36:36.0433609Z I1017 10:36:36.043016   14404 loader.go:395] Config loaded from file:  F:\azdevops_release\fnf\1\_work\_temp\helmTask\1760711795879\config
+2025-10-17T14:36:36.0490472Z 
+2025-10-17T14:36:36.0916059Z [command]F:\azdevops_release\fnf\1\_work\_tool\helm\4.0.0-beta.1\x64\windows-amd64\helm.exe upgrade --namespace dev-aks-sinhbgprocess --install --force --set namespace=dev-aks-sinhbgprocess --set image.tag=394355 --set appVersion=394355 --set fullnameOverride=sinhbgprocess --set color=green sinhbgprocess-green F:\azdevops_release\fnf\1\_work\491\Dev\sinhbgprocess-0.1.0.tgz
+2025-10-17T14:36:38.1568530Z Flag --force has been deprecated, use --force-replace instead
+2025-10-17T14:36:38.1568996Z Release "sinhbgprocess-green" does not exist. Installing it now.
+2025-10-17T14:36:38.1569572Z Error: sinhbgprocess/templates/tests/test-connection.yaml:15:92
+2025-10-17T14:36:38.1570052Z   executing "sinhbgprocess/templates/tests/test-connection.yaml" at <.Values.service.port>:
+2025-10-17T14:36:38.1570487Z     nil pointer evaluating interface {}.port
+2025-10-17T14:36:38.1740466Z ##[error]Flag --force has been deprecated, use --force-replace instead
+Error: sinhbgprocess/templates/tests/test-connection.yaml:15:92
+  executing "sinhbgprocess/templates/tests/test-connection.yaml" at <.Values.service.port>:
+    nil pointer evaluating interface {}.port
+
+2025-10-17T14:36:38.1827558Z ##[section]Finishing: Deploy on Cluster 2
