@@ -1,0 +1,24 @@
+ Setup of managed identities is failing for cosmos, pipelines failed to assign roles in west region below pipelines for reference
+OrderOrchestratorWebjob:  Pipelines - Run 2025.08.27.2002
+
+CotalitySvc/Listener:  Pipelines - Run 2025.08.22.1556 / Pipelines - Run 2025.08.22.1556
+
+EventBridge:  Pipelines - Run 2025.08.22.1604
+
+TitleDocumentSvc/Listener/webjob:  Pipelines - Run 2025.08.22.1124 / Pipelines - Run 2025.08.22.1124 / Pipelines - Run 2025.08.22.1124
+
+
+Correct roles needs to be setup for the identity to do CRUD operations,  current assigned roles 
+Cosmos DB Operator
+
+Cosmos DB Account Reader Role
+
+
+Doesn't allow CRUD operations in cosmos, according to documentation a custom role with the following permissions needs to be created
+                 "Microsoft.DocumentDB/databaseAccounts/readMetadata",
+                "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/*",
+                "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/*
+
+or enable the Azure built in role Cosmos DB Built-in Data Contributor, below documentation on how to setup the role
+
+https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/how-to-grant-data-plane-access?tabs=built-in-definition%2Ccsharp&pivots=azure-interface-cli
