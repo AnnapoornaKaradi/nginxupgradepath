@@ -1,0 +1,3 @@
+Please adjust the token limits in Prod as mentioned below - 
+
+openai_sl_valuations = 2M
